@@ -6,5 +6,9 @@ class BadBill
   # See http://www.billomat.com/en/api/clients/
   class InvoiceItem < BaseResource
     
+    def self.resource_name
+      "invoice-items"
+    end
+    
   end
 end

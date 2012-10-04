@@ -88,14 +88,10 @@ class BadBill
 
     #no_accept = options.delete :no_accept
     @http_adapter.__send__(method) { |req|
-      resource_path = "#{resource}"
-      
-      resource_path = "invoice-items" if resource_path == "invoiceitems"
-      
       if method == :get && options && !options.empty?
-        req.url "/api/#{resource_path}/#{id}", options
+        req.url "/api/#{resource}/#{id}", options
       else
-        req.url "/api/#{resource_path}/#{id}"
+        req.url "/api/#{resource}/#{id}"
       end
       req.headers['X-BillomatApiKey'] = @api_key
       req.headers['Accept'] = 'application/json'
