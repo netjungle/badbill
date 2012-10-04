@@ -24,6 +24,7 @@ class BadBill
       @id   = id
       @data = data
     end
+    
 
     # Get all resources of this type.
     #
