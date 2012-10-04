@@ -144,7 +144,7 @@ class BadBill
 
       conn.response :mashify
       conn.response :json, :content_type => /\bjson$/
-      #conn.response :logger
+      conn.response :logger
       conn.response :raise_error
       conn.adapter  :net_http
       conn.options[:timeout] = 2
