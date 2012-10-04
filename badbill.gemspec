@@ -34,6 +34,7 @@ Fast and easy access to all resources the Billomat API provides (not all resourc
     ./lib/badbill/client.rb
     ./lib/badbill/forward_methods.rb
     ./lib/badbill/invoice.rb
+    ./lib/badbill/invoice_item.rb
     ./lib/badbill/resource.rb
     ./spec/badbill/base_resource_spec.rb
     ./spec/badbill/client_spec.rb
