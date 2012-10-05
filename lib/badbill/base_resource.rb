@@ -65,7 +65,7 @@ class BadBill
       else
         res_data = res.__send__(resource_name_singular)
       end
-      puts res_date.inspect
+      puts res_data.inspect
       
       new res_data.id, res_data
     end
