@@ -58,13 +58,9 @@ class BadBill
     def self.create params
       res = post(resource_name, {resource_name_singular => params})
  
-      if resource_name_singular == "invoiceitem"
-        res_data = res.__send__("invoice-item")
-      elsif resource_name_singular == "invoicepayment"
-        res_data = res.__send__("invoice-payment")
-      else
+    
         res_data = res.__send__(resource_name_singular)
-      end
+    #  end
       new res_data.id, res_data
     end
 
