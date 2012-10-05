@@ -59,7 +59,11 @@ class BadBill
       res = post(resource_name, {resource_name_singular => params})
       puts res.inspect
       puts resource_name_singular
-      res_data = res.__send__(resource_name_singular)
+      if resource_name_singular == "invoiceitem"
+        res_data = res.__send__("invoice-item")
+      else
+        res_data = res.__send__(resource_name_singular)
+      end
       puts res_data.inspect
       new res_data.id, res_data
     end
